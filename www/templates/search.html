@@ -1,5 +1,17 @@
 <ion-view view-title="Search">
   <ion-content>
-    <h1>Search</h1>
+    <div>
+      {{vm.user.firstName}}
+      {{vm.user.lastName}}
+    </div>
+    <div>
+      <form ng-submit="vm.createUser()" >
+      <input type="text" ng-model="vm.user.firstName" />
+      <input type="text" ng-model="vm.user.lastName" />
+      <input type="submit" value="Save" class="btn btn-default" />
+      </form>
+    </div>
+    <input type="button" value="Get Info" class="btn btn-default" ng-click="vm.getUserInfo()" />
+    <h1>{{"hello" | translate}}</h1>
   </ion-content>
 </ion-view>
